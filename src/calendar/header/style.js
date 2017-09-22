@@ -5,16 +5,14 @@ export default function(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     header: {
-      flexDirection: 'row',
-      justifyContent: 'space-between', 
-      alignItems: 'flex-start'
+      marginBottom: 3
     },
     monthText: {
       fontSize: appStyle.textMonthFontSize,
       fontFamily: appStyle.textMonthFontFamily,
       fontWeight: '500',
-      color: appStyle.monthTextColor,
-      margin: 10
+      lineHeight: 28,
+      color: appStyle.monthTextColor
     },
     arrow: {
       padding: 10
@@ -30,13 +28,14 @@ export default function(theme={}) {
       })
     },
     week: {
-      marginTop: 7,
+      marginVertical: 15,
       flexDirection: 'row',
-      justifyContent: 'space-around'
+      justifyContent: 'space-around',
+      borderColor: "#e9ecee",
+      borderBottomWidth: 1
     },
     dayHeader: {
-      marginTop: 2,
-      marginBottom: 7,
+      paddingBottom: 15,
       width: 32,
       textAlign: 'center',
       fontSize: appStyle.textDayHeaderFontSize,
