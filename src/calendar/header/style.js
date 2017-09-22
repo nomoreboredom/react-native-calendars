@@ -29,14 +29,14 @@ export default function(theme={}) {
       })
     },
     week: {
-      marginVertical: 15,
+      marginVertical: 10,
       flexDirection: 'row',
       justifyContent: 'space-around',
       borderColor: "#e9ecee",
       borderBottomWidth: 1
     },
     dayHeader: {
-      paddingBottom: 15,
+      paddingBottom: 10,
       width: 32,
       textAlign: 'center',
       fontSize: appStyle.textDayHeaderFontSize,
