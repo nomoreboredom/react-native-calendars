@@ -5,7 +5,8 @@ export default function(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     header: {
-      marginBottom: 3
+      marginBottom: 3,
+      marginTop: 14
     },
     monthText: {
       fontSize: appStyle.textMonthFontSize,
