@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import LinearGradient from 'react-native-linear-gradient';
 //import _ from 'lodash';
 import {
   TouchableWithoutFeedback,
@@ -157,8 +158,8 @@ class Day extends Component {
           backgroundColor: flags.endingDay.color
         });
       } else if (flags.day) {
-        leftFillerStyle = {backgroundColor: flags.day.color};
-        rightFillerStyle = {backgroundColor: flags.day.color};
+        leftFillerStyle = {};
+        rightFillerStyle = {};
       } else if (flags.endingDay && flags.startingDay) {
         rightFillerStyle = {
           backgroundColor: this.theme.calendarBackground
@@ -173,8 +174,23 @@ class Day extends Component {
 
       fillers = (
         <View style={this.style.fillers}>
-          <View style={[this.style.leftFiller, leftFillerStyle]}/>
-          <View style={[this.style.rightFiller, rightFillerStyle]}/>
+
+          {flags.day ?
+            <LinearGradient
+              colors={["#466bff", "#52a6ec"]}
+              style={{flex:1, borderRadius: 4}}
+               >
+               <View style={[this.style.leftFiller, leftFillerStyle]}/>
+               <View style={[this.style.rightFiller, rightFillerStyle]}/>
+            </LinearGradient>
+            :
+            <View>
+              <View style={[this.style.leftFiller, leftFillerStyle]}/>
+              <View style={[this.style.rightFiller, rightFillerStyle]}/>
+            </View>
+          }
+
+
         </View>
       );
     }
