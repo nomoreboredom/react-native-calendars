@@ -170,6 +170,7 @@ class CalendarList extends Component {
         keyExtractor={(item, index) => index}
         initialScrollIndex={this.state.openDate ? this.getMonthIndex(this.state.openDate) : false}
         getItemLayout={this.getItemLayout}
+        bounces={false}
       />
     );
   }
