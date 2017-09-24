@@ -5,8 +5,7 @@ export default function(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     header: {
-      marginBottom: 3,
-      marginTop: 14
+      paddingTop: 26,
     },
     monthText: {
       fontSize: appStyle.textMonthFontSize,
@@ -29,14 +28,14 @@ export default function(theme={}) {
       })
     },
     week: {
-      marginVertical: 10,
+      marginTop: 18,
+      paddingBottom: 15,
       flexDirection: 'row',
       justifyContent: 'space-around',
       borderColor: "#e9ecee",
       borderBottomWidth: 1
     },
     dayHeader: {
-      paddingBottom: 10,
       width: 32,
       textAlign: 'center',
       fontSize: appStyle.textDayHeaderFontSize,
