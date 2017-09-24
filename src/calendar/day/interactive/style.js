@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import * as defaultStyle from '../../../style';
 
-const FILLER_HEIGHT = 48;
+const FILLER_HEIGHT = 40;
 
 export default function styleConstructor(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
@@ -9,7 +9,7 @@ export default function styleConstructor(theme={}) {
     wrapper: {
       flex: 1,
       alignItems: 'center',
-      alignSelf: 'stretch' 
+      alignSelf: 'stretch'
     },
     base: {
       //borderWidth: 1,
@@ -33,7 +33,7 @@ export default function styleConstructor(theme={}) {
       flex: 1
     },
     text: {
-      marginTop: 14,
+      marginTop: 10,
       fontSize: appStyle.textDayFontSize,
       fontFamily: appStyle.textDayFontFamily,
       fontWeight: '300',
