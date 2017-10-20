@@ -4,8 +4,7 @@ import * as defaultStyle from '../../style';
 export default function(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
-    header: {
-      paddingTop: 26,
+    header: { 
     },
     monthText: {
       fontSize: appStyle.textMonthFontSize,
