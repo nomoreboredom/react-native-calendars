@@ -40,8 +40,7 @@ export default function styleConstructor(theme={}) {
       color: appStyle.dayTextColor || '#2d4150',
       backgroundColor: 'rgba(255, 255, 255, 0)'
     },
-    todayText: {
-      fontWeight: '500',
+    todayText: { 
       color: theme.todayTextColor || appStyle.dayTextColor,
       //color: appStyle.textLinkColor
     },
