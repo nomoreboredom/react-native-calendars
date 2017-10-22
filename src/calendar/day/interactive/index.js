@@ -120,7 +120,7 @@ class Day extends Component {
 
     if (this.props.marked) {
       containerStyle.push({
-        borderRadius: 17
+        //borderRadius: 17
       });
 
       const flags = this.markingStyle;
@@ -138,6 +138,7 @@ class Day extends Component {
       }
 
       if (flags.startingDay && !flags.endingDay) {
+        textStyle.push({fontWeight: '500'});
         leftFillerStyle = {
           backgroundColor: this.theme.calendarBackground
         };
@@ -148,6 +149,7 @@ class Day extends Component {
           backgroundColor: flags.startingDay.color
         });
       } else if (flags.endingDay && !flags.startingDay) {
+        textStyle.push({fontWeight: '500'});
         rightFillerStyle = {
           backgroundColor: this.theme.calendarBackground
         };
@@ -158,9 +160,11 @@ class Day extends Component {
           backgroundColor: flags.endingDay.color
         });
       } else if (flags.day) {
+        textStyle.push({fontWeight: '500'});
         leftFillerStyle = {};
         rightFillerStyle = {};
       } else if (flags.endingDay && flags.startingDay) {
+        textStyle.push({fontWeight: '500'});
         rightFillerStyle = {
           backgroundColor: this.theme.calendarBackground
         };
@@ -176,18 +180,15 @@ class Day extends Component {
         <View style={this.style.fillers}>
 
           {flags.day ?
-            <LinearGradient
-              colors={["#466bff", "#52a6ec"]}
-              style={{flex:1, borderRadius: 4}}
-               >
+              <View
+                style={{
+                  flex:1,
+                }}>
                <View style={[this.style.leftFiller, leftFillerStyle]}/>
                <View style={[this.style.rightFiller, rightFillerStyle]}/>
-            </LinearGradient>
+              </View>
             :
-            <View>
-              <View style={[this.style.leftFiller, leftFillerStyle]}/>
-              <View style={[this.style.rightFiller, rightFillerStyle]}/>
-            </View>
+            null
           }
 
 
