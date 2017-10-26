@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Platform } from 'react-native';
 import PropTypes from 'prop-types';
 //import LinearGradient from 'react-native-linear-gradient';
 //import _ from 'lodash';
@@ -136,9 +137,11 @@ class Day extends Component {
       if (flags.rightFillerStyle) {
         rightFillerStyle.backgroundColor = flags.rightFillerStyle;
       }
-
       if (flags.startingDay && !flags.endingDay) {
-        textStyle.push({fontWeight: '500'});
+
+        if(Platform.OS === "ios") {
+          textStyle.push({fontWeight: '500'});
+        }
         leftFillerStyle = {
           backgroundColor: this.theme.calendarBackground
         };
@@ -160,11 +163,15 @@ class Day extends Component {
           backgroundColor: flags.endingDay.color
         });
       } else if (flags.day) {
-        textStyle.push({fontWeight: '500'});
+        if(Platform.OS === "ios") {
+          textStyle.push({fontWeight: '500'});
+        }
         leftFillerStyle = {};
         rightFillerStyle = {};
       } else if (flags.endingDay && flags.startingDay) {
-        textStyle.push({fontWeight: '500'});
+        if(Platform.OS === "ios") {
+          textStyle.push({fontWeight: '500'});
+        }
         rightFillerStyle = {
           backgroundColor: this.theme.calendarBackground
         };
