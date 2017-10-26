@@ -4,14 +4,15 @@ import * as defaultStyle from '../../style';
 export default function(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
-    header: { 
+    header: {
     },
     monthText: {
       fontSize: appStyle.textMonthFontSize,
       fontFamily: appStyle.textMonthFontFamily,
       fontWeight: '500',
       lineHeight: 28,
-      color: appStyle.monthTextColor
+      color: appStyle.monthTextColor,
+      marginTop: 15
     },
     arrow: {
       padding: 10
