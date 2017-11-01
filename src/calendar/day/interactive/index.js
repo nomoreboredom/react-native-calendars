@@ -152,7 +152,9 @@ class Day extends Component {
           backgroundColor: flags.startingDay.color
         });
       } else if (flags.endingDay && !flags.startingDay) {
-        textStyle.push({fontWeight: '500'});
+        if(Platform.OS === "ios") {
+          textStyle.push({fontWeight: '500'});
+        }
         rightFillerStyle = {
           backgroundColor: this.theme.calendarBackground
         };
