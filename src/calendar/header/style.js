@@ -12,7 +12,8 @@ export default function(theme={}) {
       fontWeight: '500',
       lineHeight: 28,
       color: appStyle.monthTextColor,
-      marginTop: 15
+      marginTop: 15,
+      marginLeft: 16
     },
     arrow: {
       padding: 10
