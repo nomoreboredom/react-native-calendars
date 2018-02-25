@@ -7,13 +7,15 @@ export default function(theme={}) {
     header: {
     },
     monthText: {
+      flex:1,
+      justifyContent: 'center',
+      textAlign: 'center',
       fontSize: appStyle.textMonthFontSize,
       fontFamily: appStyle.textMonthFontFamily,
-      fontWeight: '500',
       lineHeight: 28,
       color: appStyle.monthTextColor,
       marginTop: 15,
-      marginLeft: 16
+      //marginLeft: 16
     },
     arrow: {
       padding: 10
