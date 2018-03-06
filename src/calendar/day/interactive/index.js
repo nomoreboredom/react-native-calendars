@@ -114,7 +114,7 @@ class Day extends Component {
     let fillers;
 
     if (this.props.state === 'disabled') {
-      textStyle.push(this.style.disabledText);
+      textStyle.push(this.style.disabledText); 
     } else if (this.props.state === 'today') {
       textStyle.push(this.style.todayText);
     }
@@ -138,9 +138,8 @@ class Day extends Component {
         rightFillerStyle.backgroundColor = flags.rightFillerStyle;
       }
       if (flags.startingDay && !flags.endingDay) {
-
         if(Platform.OS === "ios") {
-          textStyle.push({fontWeight: '500'});
+          //textStyle.push({fontWeight: '500'});
         }
         leftFillerStyle = {
           backgroundColor: this.theme.calendarBackground
@@ -153,7 +152,7 @@ class Day extends Component {
         });
       } else if (flags.endingDay && !flags.startingDay) {
         if(Platform.OS === "ios") {
-          textStyle.push({fontWeight: '500'});
+          //textStyle.push({fontWeight: '500'});
         }
         rightFillerStyle = {
           backgroundColor: this.theme.calendarBackground
@@ -166,13 +165,13 @@ class Day extends Component {
         });
       } else if (flags.day) {
         if(Platform.OS === "ios") {
-          textStyle.push({fontWeight: '500'});
+          //textStyle.push({fontWeight: '500'});
         }
         leftFillerStyle = {};
         rightFillerStyle = {};
       } else if (flags.endingDay && flags.startingDay) {
         if(Platform.OS === "ios") {
-          textStyle.push({fontWeight: '500'});
+          //textStyle.push({fontWeight: '500'});
         }
         rightFillerStyle = {
           backgroundColor: this.theme.calendarBackground
